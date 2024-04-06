@@ -1,6 +1,9 @@
 import "../App.css";
 import { Card} from "keep-react";
 
+
+
+
 export const ConfirmationComponent = ({infoFromSteps}) => {
 
   console.log('desde confirmation' , infoFromSteps)
