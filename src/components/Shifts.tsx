@@ -24,7 +24,7 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
   const handleClick = (shiftData: ShiftSelected) => {
 
     //LOGIC FOR SELECTED TAG DISABLED-ACTIVE
-    console.log(shiftData);
+    
     if (disabledTags.includes(shiftData.id)) {
       setDisabledTags((prevDisabledTags) =>
         prevDisabledTags.filter((id) => id !== shiftData.id)
@@ -40,9 +40,10 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
 
 
   return (
-    <article className="flex flex-col m-auto py-5">
-      <div className="flex flex-col items-center">
-      <Card className="max-w-md">
+/*     <article className="flex flex-col m-auto py-5">
+      <div className="flex flex-col items-center"> */
+      <section className="flex flex-col border-0 border-gray-200 rounded p-3 w-full">
+      <Card className="max-w-md flex flex-col m-auto my-5">
         {Shifts.map((shift: Shift) => { 
           return (
             <Card.Content className="flex flex-col gap-3" key={shift.serviceId}>
@@ -72,9 +73,10 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
           );
         })}
       </Card>
-      </div>
+      </section>
+/*       </div>
 
-    </article>
+    </article> */
   );
 };
 

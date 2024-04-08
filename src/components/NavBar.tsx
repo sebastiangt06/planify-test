@@ -17,14 +17,14 @@ function NavBarComponent() {
               icon={<Coffee size={40} color="#4338CA" weight={"duotone"}/>}
               iconAnimation={false}
             />
-            <p className=" text-indigo-700">Reservar</p>
+            <p className=" text-indigo-700">Reserve</p>
             </div>
             <div className="flex flex-col font-semibold items-center">
             <Navbar.Link
               icon={<Heart size={40} color="#334155" />}
               iconAnimation={true}
             />
-            <p className="text-slate-700">Mis Turnos</p>
+            <p className="text-slate-700">My Shifts</p>
             </div>
 
           </Navbar.Container>

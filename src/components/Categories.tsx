@@ -56,13 +56,13 @@ export const Categories = () => {
   //VALIDATON LOGIC FOR STEPS
 
   const validateData = () => {
-    console.log(infoFromSteps);
+  
     if ("data" in infoFromSteps) {
       return true;
     } else if ("shiftData" in infoFromSteps) {
       return true;
     } else if (Object.keys(infoFromSteps).length === 0) {
-      console.log("objeto vacio");
+      
       return false;
     }
   };
@@ -78,7 +78,7 @@ export const Categories = () => {
   };
 
   const ValidateShiftData = () => {
-    console.log(infoFromSteps)
+  
     if ("shiftData" in infoFromSteps && "data" in infoFromSteps) {
       return true;
     } else {
@@ -119,7 +119,7 @@ export const Categories = () => {
             className="text-indigo-800 border font-semibold border-indigo-800 bg-gray-100 hover:bg-indigo-800 hover:text-gray-50 duration-300 transition-all eas-in-out"
             onClick={prevStep}
           >
-            Anterior
+            Previous
           </Button>
         )}
         {currentStep === 1 && validateData() && (
@@ -129,7 +129,7 @@ export const Categories = () => {
             onClick={nextStep}
             disabled={validateData() ? false : true}
           >
-            Siguiente
+            Next
           </Button>
         )}
         {currentStep === 2 && (
@@ -139,7 +139,7 @@ export const Categories = () => {
             onClick={nextStep}
             disabled={ValidateShiftData() ? false : true}
           >
-            Siguiente
+            Next
           </Button>
         )}
         {currentStep === 3 && (
@@ -147,12 +147,14 @@ export const Categories = () => {
               size="xs"
               className="text-indigo-800 border font-semibold border-indigo-800 bg-gray-100 hover:bg-indigo-800 hover:text-gray-50 duration-300 transition-all eas-in-out"
               onClick={resetSteps}
+              disabled={validateData() ? false : true}
             >
-              Confirmar
+              Confirm
             </Button>
         )}
-        <ModalComponent isOpen={isModalOpen} closeModal={closeModal}/>
+       
       </div>
+      <ModalComponent isOpen={isModalOpen} closeModal={closeModal}/>
     </section>
   );
 };

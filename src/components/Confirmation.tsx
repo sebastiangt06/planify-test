@@ -21,7 +21,7 @@ interface CombinedData {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: CombinedData}) => {
 
-  console.log('desde confirmation' , infoFromSteps)
+  
   
 
 
@@ -31,10 +31,10 @@ export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: Combined
         <Card className="max-w-md">
           <Card.Content>
             <Card.Title className="text-xl font-bold">
-              Servicio: {infoFromSteps?.data?.name}
+              Service: {infoFromSteps?.data?.name}
             </Card.Title>
             <Card.Description className="text-lg font-semibold">
-              Fecha: {infoFromSteps?.shiftData?.date} - {infoFromSteps?.shiftData?.time}
+              Date: {infoFromSteps?.shiftData?.date} - {infoFromSteps?.shiftData?.time}
             </Card.Description>
           </Card.Content>
         </Card>
