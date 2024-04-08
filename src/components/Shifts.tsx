@@ -40,7 +40,7 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
 
 
   return (
-    <article className="flex flex-col w-96 m-auto py-5">
+    <article className="flex flex-col m-auto py-5">
       <div className="flex flex-col items-center">
       <Card className="max-w-md">
         {Shifts.map((shift: Shift) => { 

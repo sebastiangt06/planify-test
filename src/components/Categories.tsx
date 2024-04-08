@@ -5,7 +5,7 @@ import Shifts from "../components/Shifts";
 import Confirmation from "../components/Confirmation";
 import { useState } from "react";
 import ProgressComponent from "../components/ProgressBar";
-import { AlertComponent } from "../components/Alert";
+import { ModalComponent } from "../components/Alert";
 
 
 type Service = {
@@ -34,7 +34,14 @@ type ShiftSelected ={
 export const Categories = () => {
   const [currentStep, setCurrentStep] = useState(1);
   const [infoFromSteps, setInfoFromSteps] = useState({});
-  const [stateAlert, setStateAlert] = useState(true);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true)
+  }
+  const closeModal = () => {
+    setIsModalOpen(false)
+  }
 
   //COMUNICATION BETWEEEN COMPONENTS
 
@@ -43,6 +50,8 @@ export const Categories = () => {
     setInfoFromSteps((prevInfo) => ({ ...prevInfo, ...data }));
   };
   //COMUNICATION BETWEEEN COMPONENTS
+
+
 
   //VALIDATON LOGIC FOR STEPS
 
@@ -64,7 +73,7 @@ export const Categories = () => {
     if (validateData()) {
       setCurrentStep(currentStep + 1);
     } else if (currentStep === 3) {
-      setStateAlert(false);
+      setIsModalOpen(false);
     }
   };
 
@@ -82,8 +91,9 @@ export const Categories = () => {
   };
 
   const resetSteps = async () => {
-    setStateAlert(false);
+    openModal()
     setCurrentStep(1);
+    setInfoFromSteps({})
   };
   //STEPPER LOGIC - SPECIALLY MADE IT FOR THE PROGRESS BAR
 
@@ -100,7 +110,7 @@ export const Categories = () => {
       {currentStep === 3 && <Confirmation infoFromSteps={infoFromSteps} />}
       <div
         className={`flex flex-row my-5 w-full ${
-          currentStep < 3 ? "justify-end" : "justify-between"
+          currentStep === 1 ? "justify-end" : "justify-between"
         }`}
       >
         {currentStep > 1 && currentStep <= 3 && (
@@ -133,8 +143,6 @@ export const Categories = () => {
           </Button>
         )}
         {currentStep === 3 && (
-          <>
-            <AlertComponent alertState={stateAlert} />
             <Button
               size="xs"
               className="text-indigo-800 border font-semibold border-indigo-800 bg-gray-100 hover:bg-indigo-800 hover:text-gray-50 duration-300 transition-all eas-in-out"
@@ -142,8 +150,8 @@ export const Categories = () => {
             >
               Confirmar
             </Button>
-          </>
         )}
+        <ModalComponent isOpen={isModalOpen} closeModal={closeModal}/>
       </div>
     </section>
   );
