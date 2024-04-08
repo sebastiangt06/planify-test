@@ -35,7 +35,7 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
     //LOGIC FOR SELECTED TAG DISABLED-ACTIVE
 
 -
-    handleInfoFromSteps(shiftData) 
+    handleInfoFromSteps({shiftData})
   };
 
 

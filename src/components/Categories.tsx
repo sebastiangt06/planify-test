@@ -33,15 +33,14 @@ type ShiftSelected ={
 
 export const Categories = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const [infoFromSteps, setInfoFromSteps] = useState<CombinedData>({ data: { id: 0, name: "", description: "", category: "" }});
+  const [infoFromSteps, setInfoFromSteps] = useState({});
   const [stateAlert, setStateAlert] = useState(true);
 
   //COMUNICATION BETWEEEN COMPONENTS
 
   const handleInfoFromSteps = (data : CombinedData | Service | ShiftSelected) => {
 
-
-    setInfoFromSteps((prevInfo) => ({ ...prevInfo, ...data })); 
+    setInfoFromSteps((prevInfo) => ({ ...prevInfo, ...data }));
   };
   //COMUNICATION BETWEEEN COMPONENTS
 
@@ -70,6 +69,7 @@ export const Categories = () => {
   };
 
   const ValidateShiftData = () => {
+    console.log(infoFromSteps)
     if ("shiftData" in infoFromSteps && "data" in infoFromSteps) {
       return true;
     } else {

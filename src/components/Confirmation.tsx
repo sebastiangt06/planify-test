@@ -15,13 +15,10 @@ interface ShiftData {
 }
 
 interface CombinedData {
-  data: Service;
+  data?: Service;
   shiftData?: ShiftData;
 }
-
-
-
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: CombinedData}) => {
 
   console.log('desde confirmation' , infoFromSteps)
