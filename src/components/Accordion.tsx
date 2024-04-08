@@ -106,8 +106,8 @@ export const AccordionComponent: React.FC<AccordionComponentProps> = ({handleInf
                         //disabled={disabledButtons.includes(service.id)}
                         className={`border font-semibold border-indigo-700 bg-gray-100 hover:bg-indigo-800 ${
                           disabledButtons.includes(service.id)
-                            ? "bg-indigo-900 text-gray-50 font-bold cursor-pointer hover:text-gray-50 hover:none before:content-['Seleccionado'] duration-100 transition-all ease-in-out"
-                            : "text-indigo-800 hover:text-gray-50 before:content-['Seleccionar'] duration-100 transition-all ease-in-out"
+                            ? "bg-indigo-900 text-gray-50 font-bold cursor-pointer hover:text-gray-50 hover:none before:content-['Selected'] duration-100 transition-all ease-in-out"
+                            : "text-indigo-800 hover:text-gray-50 before:content-['Select'] duration-100 transition-all ease-in-out"
                         }`}
 
                       >
