@@ -40,10 +40,8 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
 
 
   return (
-/*     <article className="flex flex-col m-auto py-5">
-      <div className="flex flex-col items-center"> */
-      <section className="flex flex-col border-0 border-gray-200 rounded p-3 w-full">
-      <Card className="max-w-md flex flex-col m-auto my-5">
+
+      <Card className="max-w-md flex flex-col m-auto my-5 w-full">
         {Shifts.map((shift: Shift) => { 
           return (
             <Card.Content className="flex flex-col gap-3" key={shift.serviceId}>
@@ -73,10 +71,7 @@ export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any
           );
         })}
       </Card>
-      </section>
-/*       </div>
 
-    </article> */
   );
 };
 

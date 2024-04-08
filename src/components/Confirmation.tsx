@@ -26,8 +26,8 @@ export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: Combined
 
 
   return (
-    <section className="flex flex-col w-96 m-auto justify-center py-5">
-      <div>
+    <section className="flex flex-col w-full py-5 md:items-center">
+
         <Card className="max-w-md">
           <Card.Content>
             <Card.Title className="text-xl font-bold">
@@ -38,7 +38,6 @@ export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: Combined
             </Card.Description>
           </Card.Content>
         </Card>
-      </div>
 
     </section>
   );
