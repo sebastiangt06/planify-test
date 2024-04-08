@@ -109,8 +109,8 @@ export const Categories = () => {
       )}
       {currentStep === 3 && <Confirmation infoFromSteps={infoFromSteps} />}
       <div
-        className={`flex flex-row my-5 w-full ${
-          currentStep === 1 ? "justify-end" : "justify-between"
+        className={`flex flex-row my-5 w-full mb-20 ${
+          currentStep === 1 ? "justify-end md:justify-end" : "justify-between px-4"
         }`}
       >
         {currentStep > 1 && currentStep <= 3 && (
