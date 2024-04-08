@@ -2,7 +2,7 @@ import "../App.css";
 
 import { Shifts } from "../services/shiftsData";
 import { Tag, Badge, Card } from "keep-react";
-import { useState } from "react";
+import { useState} from "react";
 
 type Shift = {
   date: string;
@@ -16,7 +16,8 @@ type ShiftSelected ={
   time: string;
 }
 
-export const ShiftsComponent = ({handleInfoFromSteps}) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export const ShiftsComponent = ({handleInfoFromSteps}:{handleInfoFromSteps : any}) => {
 
   const [disabledTags, setDisabledTags] = useState<number[]>([]);
 
@@ -33,7 +34,8 @@ export const ShiftsComponent = ({handleInfoFromSteps}) => {
     }
     //LOGIC FOR SELECTED TAG DISABLED-ACTIVE
 
-    handleInfoFromSteps({shiftData})
+-
+    handleInfoFromSteps(shiftData) 
   };
 
 

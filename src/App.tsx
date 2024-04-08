@@ -1,6 +1,5 @@
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import ProgressComponent from './components/ProgressBar.tsx'
+
 import NavBarComponent from './components/NavBar.tsx'
 import Categories from './components/Categories.tsx'
 

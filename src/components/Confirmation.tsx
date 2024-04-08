@@ -1,13 +1,31 @@
 import "../App.css";
 import { Card} from "keep-react";
 
+interface Service {
+  id: number;
+  name: string;
+  category: string;
+  description: string;
+}
+
+interface ShiftData {
+  id: number;
+  date: string;
+  time: string;
+}
+
+interface CombinedData {
+  data: Service;
+  shiftData?: ShiftData;
+}
 
 
 
-export const ConfirmationComponent = ({infoFromSteps}) => {
+
+export const ConfirmationComponent = ({infoFromSteps} : {infoFromSteps: CombinedData}) => {
 
   console.log('desde confirmation' , infoFromSteps)
-
+  
 
 
   return (

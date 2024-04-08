@@ -4,15 +4,31 @@ import { Accordion, Button } from "keep-react";
 import { useState } from "react";
 //import Accordion from "react-bootstrap/Accordion";
 
-type Service = {
+interface Service {
   id: number;
   name: string;
-  description: string;
   category: string;
-};
+  description: string;
+}
+
+interface ShiftData {
+  id: number;
+  date: string;
+  time: string;
+}
+
+interface CombinedData {
+  data: Service;
+  shiftData?: ShiftData;
+}
 
 
-export const AccordionComponent = ({handleInfoFromSteps}) => {
+interface AccordionComponentProps {
+  handleInfoFromSteps: (data:CombinedData) => void;
+}
+
+
+export const AccordionComponent: React.FC<AccordionComponentProps> = ({handleInfoFromSteps}) => {
 
   //
   const [disabledButtons, setDisabledButtons] = useState<number[]>([]);
@@ -88,7 +104,7 @@ export const AccordionComponent = ({handleInfoFromSteps}) => {
                         key={service.id}
                         onClick={() => handleClick({id: service.id, name: service.name,category: service.category, description: service.description})}
                         //disabled={disabledButtons.includes(service.id)}
-                        className={` border-1 font-semibold border-indigo-800 bg-gray-100 hover:bg-indigo-800 ${
+                        className={`border font-semibold border-indigo-700 bg-gray-100 hover:bg-indigo-800 ${
                           disabledButtons.includes(service.id)
                             ? "bg-indigo-900 text-gray-50 font-bold cursor-pointer hover:text-gray-50 hover:none before:content-['Seleccionado'] duration-100 transition-all ease-in-out"
                             : "text-indigo-800 hover:text-gray-50 before:content-['Seleccionar'] duration-100 transition-all ease-in-out"
@@ -105,6 +121,7 @@ export const AccordionComponent = ({handleInfoFromSteps}) => {
           );
         })}
       </Accordion>
+
     </>
   );
 };
