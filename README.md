@@ -3,7 +3,7 @@
 
 - Comando para instalar dependencias : npm install
 - Comando para levantar el proyecto : npm run dev
-- 
+
 # URL DE LA APLICACION DESPLEGADA EN VERCEL
 - https://planify-test.vercel.app/
 
@@ -16,7 +16,7 @@
 
  # LIBRERIAS USADAS PARA EL DESARROLLO DE LA PRUEBA
 - Keep React - https://react.keepdesign.io/
-- 
+
 
 ## Expanding the ESLint configuration
 
