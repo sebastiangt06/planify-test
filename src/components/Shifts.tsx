@@ -46,7 +46,7 @@ export const ShiftsComponent = ({ handleInfoFromSteps }: any) => {
       {Shifts.map((shift: Shift) => {
         return (
           <Card.Content className="flex flex-col gap-3" key={shift.serviceId}>
-            <Card.Title>Próximos turnos disponibles</Card.Title>
+            <Card.Title>Next available shifts</Card.Title>
             <Card.Description>
               <Badge
                 color="primary"
