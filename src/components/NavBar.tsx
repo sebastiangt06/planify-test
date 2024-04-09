@@ -4,7 +4,7 @@ import { Heart , Coffee } from "phosphor-react";
 
 function NavBarComponent() {
   return (
-    <Navbar fluid={true} className='fixed inset-x-0 bottom-0 h-20 bg-transparent'>
+    <Navbar fluid={true} className='fixed inset-x-0 bottom-0  h-30 xs:h-20 bg-transparent'>
       <Navbar.Container className="flex items-center justify-around">
 
         <Navbar.Container className="flex items-center gap-3">
@@ -22,7 +22,7 @@ function NavBarComponent() {
             <div className="flex flex-col font-semibold items-center">
             <Navbar.Link
               icon={<Heart size={40} color="#334155" />}
-              iconAnimation={true}
+              iconAnimation={false}
             />
             <p className="text-slate-700">My Shifts</p>
             </div>
