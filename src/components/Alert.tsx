@@ -17,7 +17,7 @@ export const ModalComponent = ({isOpen, closeModal}:any) => {
               ¡Service Reserved!
             </Typography>
             <Typography variant="p" className="text-body-4 font-normal text-metal-600">
-              Your service has has been succesfully reserved.
+              Your service has been succesfully reserved.
             </Typography>
           </Modal.Content>
           <Modal.Footer>

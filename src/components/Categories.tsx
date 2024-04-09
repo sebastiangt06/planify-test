@@ -100,13 +100,13 @@ export const Categories = () => {
   return (
     <section className="flex flex-col border-0 border-gray-200 rounded p-3 w-full">
       {currentStep === 1 && (
-        <h6 className="text-indigo-700 font-bold">Seleccionar Servicio</h6>
+        <h6 className="text-indigo-700 font-bold">Select Service</h6>
       )}
       {currentStep === 2 && (
-        <h6 className="text-indigo-700 font-bold">Seleccionar horario</h6>
+        <h6 className="text-indigo-700 font-bold">Select Service</h6>
       )}
       {currentStep === 3 && (
-        <h6 className="text-indigo-700 font-bold">Confirmar Turno</h6>
+        <h6 className="text-indigo-700 font-bold">Confirm Shift</h6>
       )}
       
       <ProgressComponent value={currentStep * 33.3333333333} />
