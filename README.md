@@ -1,11 +1,22 @@
 # React + TypeScript + Vite
+# Comandos para inicializar el proyecto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Comando para instalar dependencias : npm install
+- Comando para levantar el proyecto : npm run dev
+- 
+# URL DE LA APLICACION DESPLEGADA EN VERCEL
+- https://planify-test.vercel.app/
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# TECNOLOGIAS USADAS PARA EL DESARROLLO
+- React Js
+- TailwindCSS
+- TypeScript
+- Vite
+
+ # LIBRERIAS USADAS PARA EL DESARROLLO DE LA PRUEBA
+- Keep React - https://react.keepdesign.io/
+- 
 
 ## Expanding the ESLint configuration
 
